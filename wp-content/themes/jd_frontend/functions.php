@@ -50,6 +50,7 @@ function frontend_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'frontend' ),
+			'frontend-menu' => esc_html__( 'Front-end Menu', 'frontend' ),
 		)
 	);
 
@@ -176,3 +177,5 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+add_filter( 'show_admin_bar', '__return_false' );
