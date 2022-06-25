@@ -1,0 +1,41 @@
+.page-template-template-frontend {
+    & .header {
+        padding: 1.3rem 0;
+        
+        @include mq(md) {
+            padding: 2.625rem 0;
+        }
+        &__wrapper{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__logo {
+            & img {
+                max-width: 80%;
+
+                @include mq(md){
+                    max-width: 100%;
+                }
+            }
+        }
+
+        &__nav {
+            display: flex;
+            align-items: center;
+            &-item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-weight: 700;
+                color: $color__primary;
+
+                @include fontSize(10);
+
+                & .arrow {
+                    margin-right: 0.375rem;
+                }
+            }
+        }
+    }
+}
