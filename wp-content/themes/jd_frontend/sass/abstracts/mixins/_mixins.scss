@@ -9,3 +9,19 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+@mixin mq($vp) {
+    @media all and (min-width: map-get($breakpoints, $vp)) {
+        @content;
+    }
+}
+@mixin mq-max($vp) {
+    @media all and (max-width: map-get($breakpoints, $vp)) {
+        @content;
+    }
+}
+
+@mixin fontSize($size) {
+    $root: 16;
+    font-size: calc($size/$root) + rem;
+}

@@ -1,6 +1,12 @@
 ul,
 ol {
 	margin: 0 0 1.5em 3em;
+
+	&.list-reset {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
 }
 
 ul {
