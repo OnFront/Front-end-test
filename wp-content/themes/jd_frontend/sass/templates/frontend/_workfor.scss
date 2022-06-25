@@ -1,0 +1,65 @@
+.work-for {
+    @include mq(xl) {
+        padding: 3.75rem 0;
+    } 
+
+    &__content,
+    &__clients,
+    &__text {
+        display: flex;
+    }
+
+    &__content {
+        flex-flow: column;
+
+        @include mq(600) {
+            flex-flow: row;
+        }
+        @include mq(lg) {
+            justify-content: space-between;
+        }
+    }
+
+    &__text {
+        @include fontSize(11);
+        line-height: 0.9375rem;
+        white-space: nowrap;
+        justify-content: center;
+        color: #191919;
+        letter-spacing: 0.035em;
+        margin-bottom: 1.5rem;
+
+        @include mq(600) {
+            margin-bottom: 0;
+            margin-right: 1.6rem;
+            align-items: center;
+        }
+
+        @include mq(md) {
+            margin-right: 4.125rem;
+        }
+    }
+
+    &__clients {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include mq(600) {
+            width: 80%;
+            flex-wrap: nowrap;
+        }
+        &-item {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+
+            @include mq(600) {
+                margin-bottom: 0;
+                width: auto;
+            }
+        }
+    }
+
+}
