@@ -5,4 +5,31 @@ h4,
 h5,
 h6 {
 	clear: both;
+	font-weight: 700;
+}
+
+h1 {
+	@include fontSize(24);
+
+	@include mq(md) {
+		@include fontSize(32);
+	}
+	
+	@include mq(lg) {
+		line-height: 3.875rem;
+		@include fontSize(44);
+	}
+}
+
+h2 {
+
+	@include mq(md) {
+		line-height: 4.03125rem;
+		@include fontSize(52);
+	}
+}
+
+p {
+	@include fontSize(11);
+	line-height: 1.1875rem;
 }

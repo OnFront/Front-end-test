@@ -1,9 +1,22 @@
 .container {
     width: 100%;
     padding: 0 1.25rem;
+    margin: 0 auto;
+    position: relative;
 
     @include mq(md) {
+        // max-width 720px
+        max-width: 45rem;
+        padding: 0;
+    }
+
+    @include mq(lg) {
         // max-width 838px
         max-width: 52.375rem;
+    }
+
+    @include mq(xxl) {
+        // max-width 1031px
+        max-width: 64.4375rem;
     }
 }

@@ -19,3 +19,31 @@ input[type="submit"] {
 		border-color: $color__border-button-focus;
 	}
 }
+
+.button {
+	&__primary,
+	&__secondary {
+		@include fontSize(11);
+		font-weight: 700;
+		line-height: 1.1875rem;
+		letter-spacing: 0.02em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-width: fit-content;
+		max-height: 41px;
+		color: #FFFFFF;
+		height: 100%;
+		padding: 20px 1.78rem;
+		transition: opacity 0.10s ease-out;
+		text-decoration: none;
+		&:hover {
+			opacity: 0.9;
+			transition: opacity 0.25s ease-out;
+		}
+	}
+
+	&__primary {
+		background-color: $color__primary;
+	}
+}
