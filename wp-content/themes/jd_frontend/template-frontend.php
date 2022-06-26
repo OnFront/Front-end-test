@@ -10,7 +10,6 @@
 
 get_header('frontend');
 
-
     while(have_rows('template_layout')) : the_row();
         if(get_row_layout('template_layout') == 'hero'):
             get_template_part('templates/frontend/hero');
@@ -25,4 +24,4 @@ get_header('frontend');
         endif;
     endwhile;
 
-get_footer();
+get_footer('frontend');

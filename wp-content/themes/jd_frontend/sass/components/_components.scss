@@ -26,10 +26,15 @@
 --------------------------------------------- */
 @import "media/galleries";
 
+/* Cards
+--------------------------------------------- */
+@import "cards/benefit-item";
+
 /* Headers
 --------------------------------------------- */
 @import "headers/header-frontend";
 
-/* Cards
+/* Footers
 --------------------------------------------- */
-@import "cards/benefit-item";
+@import "footers/footer-frontend";
+

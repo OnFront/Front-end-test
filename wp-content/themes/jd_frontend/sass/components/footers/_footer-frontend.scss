@@ -1,0 +1,107 @@
+.footer {
+    background-color: $color__primary;
+    padding: 2.6875rem 0 3.9375rem;
+    color: #FFFFFF;
+
+    &__content,
+    &__lists {
+       display: flex;
+       justify-content: space-between;
+    }
+
+    &__content {
+        margin-bottom: 2.6875rem;
+        flex-flow: column;
+        text-align: center;
+        align-items: center;
+
+        @include mq(md) {
+            flex-flow: row;
+            text-align: start;
+            align-items: start;
+        }
+
+        & > div {
+            margin-bottom: 2.4rem;
+
+            @include mq(md) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__lists {
+        width: 100%;
+        max-width: 12.3125rem;
+
+        @include mq(xxl) {
+            max-width: 15rem;
+        }
+    }
+
+    &__label {
+        @include fontSize(9);
+        display: block;
+        font-weight: 700;
+        line-height: 1.187rem;
+        letter-spacing: 0.03em;
+        opacity: 0.5;
+    
+        margin-bottom: 0.3125rem;
+
+        @include mq(xxl) {
+            @include fontSize(13);
+        }
+    }
+
+    &__address {
+        &-data {
+            padding-top: 0.125rem;
+            margin-bottom: 0.9375rem;
+            & p {
+                margin-bottom: 0;
+                letter-spacing: 0.015em;
+                font-weight: 700;
+            }
+
+            & :first-child {
+                font-weight: 400;
+            }
+
+            & :last-child {
+                margin-top: 0.125rem;
+            }
+        }
+
+        &-phone,
+        &-email {
+            font-weight: 700;
+        }
+
+        &-phone {
+            letter-spacing: 0.015em;
+            margin-bottom: 0.3125rem;
+        }
+
+        &-email {
+            letter-spacing: 0.05em;
+        }
+    }
+
+    & small {
+        @include fontSize(9);
+        line-height: 1.1875rem;
+        letter-spacing: 0.03em;
+        font-weight: 400;
+        display: flex;
+        justify-content: center;
+
+        @include mq(md) {
+            justify-content: start;
+        }
+
+        @include mq(xxl) {
+            @include fontSize(11);
+        }
+    }
+}

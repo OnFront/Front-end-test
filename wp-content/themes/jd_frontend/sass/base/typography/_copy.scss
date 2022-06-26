@@ -3,6 +3,11 @@ p {
 	line-height: 1.1875rem;
 	font-weight: 400;
 	margin-bottom: 1.5em;
+
+	@include mq(xxl) {
+		@include fontSize(14);
+		line-height: 1.4rem;
+	}
 }
 
 dfn,
@@ -18,6 +23,13 @@ blockquote {
 
 address {
 	margin: 0 0 1.5em;
+	font-style: normal;
+
+	@include fontSize(11);
+
+	@include mq(xxl) {
+		@include fontSize(14);
+	}
 }
 
 pre {

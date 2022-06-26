@@ -53,3 +53,26 @@ li.expectations__list-item {
 		margin-right: 1.56rem;
 	}
 }
+
+.footer {
+	&__list {
+        & li {
+            margin-bottom: 0.3125rem;
+            & a {
+                @include fontSize(10);
+                color: #FFFFFF;
+                text-decoration: none;
+                letter-spacing: 0.05em;
+                font-weight: 700;
+
+                @include mq(xxl) {
+                    @include fontSize(14);
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -37,11 +37,14 @@ input[type="submit"] {
 		padding: 20px 1.78rem;
 		transition: opacity 0.05s ease-out;
 		text-decoration: none;
+
+		@include mq(xxl) {
+			@include fontSize(14);
+		}
 		&:hover {
 			transition: all 0.15s ease-out;
 		}
 	}
-
 	&--primary {
 		background-color: $color__primary;
 		&:hover {

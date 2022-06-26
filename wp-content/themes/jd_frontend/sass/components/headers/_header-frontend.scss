@@ -24,13 +24,18 @@
             display: flex;
             align-items: center;
             &-item {
+                @include fontSize(10);
+
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 font-weight: 700;
                 color: $color__primary;
 
-                @include fontSize(10);
+                @include mq(xxl) {
+                    @include fontSize(14);
+                }
+
 
                 & .arrow {
                     margin-right: 0.375rem;

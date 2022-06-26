@@ -2,11 +2,15 @@
     background-color: $color__primary;
     color: #ffff;
     text-align: center;
-    padding: 4.06rem 0 ;
+    padding: 4.063rem 0;
     &__header {
         margin-bottom: 1.25rem;
        @include mq(lg) {
         margin-bottom: 2.5rem;
+
+        & h2 {
+            letter-spacing: 0.04em;
+        }
        }
     }
 

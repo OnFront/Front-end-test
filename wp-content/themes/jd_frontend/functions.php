@@ -50,7 +50,8 @@ function frontend_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'frontend' ),
-			'frontend-menu' => esc_html__( 'Front-end Menu', 'frontend' ),
+			'footer-explore' => esc_html__( 'Footer Explore Menu', 'frontend' ),
+			'footer-socials' => esc_html__( 'Footer Socials Menu', 'frontend' ),
 		)
 	);
 
