@@ -37,7 +37,8 @@ input[type="submit"] {
 		padding: 20px 1.78rem;
 		transition: opacity 0.05s ease-out;
 		text-decoration: none;
-
+		border-radius: 3px;
+		
 		@include mq(xxl) {
 			@include fontSize(14);
 		}
@@ -57,6 +58,19 @@ input[type="submit"] {
 
 		&:hover {
 			color: $color__primary;
+		}
+	}
+
+	&--close {
+		all: unset;
+		position: absolute;
+		top: 1.875rem;
+		right: 1.875rem;
+		cursor: pointer;
+		transition: all .10s ease-out;
+		&:hover {
+			opacity: 0.6;
+			transition: all .25s ease-out;
 		}
 	}
 }

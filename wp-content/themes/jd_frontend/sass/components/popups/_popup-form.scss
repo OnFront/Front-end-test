@@ -1,0 +1,92 @@
+.page-template-template-frontend {
+    & .overlay {
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    & .popup {
+        color: #FFFF;
+        &__header {
+            margin-bottom: 2.625rem;
+            & h2 {
+                @include fontSize(48);
+                font-weight: 700;
+                line-height: 4.125rem;
+            }
+        }
+
+        &__content {
+            //top: 7.125rem;
+            padding: 58px 91px 49px 99px;
+            max-height: fit-content;
+            position: relative;
+            background-color: $color__secondary;
+            width: 100%;
+            max-width: 59.625rem;
+            height: 100%;
+        }
+
+        &__form {
+            max-width: 29rem;
+            & label:not(.popup__file-label) {
+                visibility: hidden;
+                position: absolute;
+            }
+        }
+
+        &__fields {
+
+            &-field {
+                display: block;
+                width: 100%;
+                border-bottom: 1px solid #FFFFFF;
+                margin-bottom: 2.8125rem;
+
+                &:last-child{
+                    margin-bottom: 2.5625rem;
+                }
+
+            }
+        }
+
+        &__file {
+            border: 3px dashed $color__primary;
+            position: relative;
+
+            &-label {
+                @include fontSize(18);
+                position: relative;
+                line-height: 1.1875rem; 
+                font-weight: 400;
+                letter-spacing: 0.005em;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 214px;
+                gap: 5px;
+                flex-flow: column;
+                background-color: #130F96;
+
+                & span {
+                    color: $color__primary;
+                    font-weight: 700;
+                    letter-spacing: 0.045em;
+                }
+
+            }
+
+            &-icon {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}
+

@@ -743,6 +743,7 @@ input[type="submit"]:focus {
 	padding: 20px 1.78rem;
 	transition: opacity 0.05s ease-out;
 	text-decoration: none;
+	border-radius: 3px;
 }
 
 @media all and (min-width: 1440px) {
@@ -770,6 +771,20 @@ input[type="submit"]:focus {
 
 .button--secondary:hover {
 	color: #F95157;
+}
+
+.button--close {
+	all: unset;
+	position: absolute;
+	top: 1.875rem;
+	right: 1.875rem;
+	cursor: pointer;
+	transition: all .10s ease-out;
+}
+
+.button--close:hover {
+	opacity: 0.6;
+	transition: all .25s ease-out;
 }
 
 input[type="text"],
@@ -819,6 +834,68 @@ select {
 
 textarea {
 	width: 100%;
+}
+
+input[type="text"].popup__form-input,
+input[type="email"].popup__form-input,
+input[type="file"].popup__form-input,
+input[type="submit"].popup__form-input {
+	all: unset;
+}
+
+input[type="text"].popup__form-input,
+input[type="email"].popup__form-input {
+	padding: .5rem 0;
+	width: 100%;
+}
+
+input[type="text"].popup__form-input::placeholder,
+input[type="email"].popup__form-input::placeholder {
+	font-size: 1.125rem;
+	letter-spacing: 0.005em;
+	line-height: 1.1875rem;
+	color: #FFFF;
+}
+
+input[type="text"].popup__form-input:focus,
+input[type="email"].popup__form-input:focus {
+	outline: 1px solid #F95157;
+	border-radius: 5px;
+	transition: all 0.18s ease-out;
+}
+
+input[type="text"].popup__form-input:focus::placeholder,
+input[type="email"].popup__form-input:focus::placeholder {
+	opacity: 0.9;
+	color: #F95157;
+}
+
+input[type="file"].popup__form-input {
+	width: 100%;
+	opacity: 0;
+	z-index: 10;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+
+input[type="submit"].popup__form-input {
+	margin-top: 1.6875rem;
+	height: 57px;
+	width: 133px;
+	background-color: #F95157;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+	border: 1px solid transparent;
+}
+
+input[type="submit"].popup__form-input:hover, input[type="submit"].popup__form-input:focus {
+	transition: all 0.18s ease-out;
+	border: 1px solid #F95157;
+	background: transparent;
+	color: #F95157;
 }
 
 /*--------------------------------------------------------------
@@ -1098,6 +1175,96 @@ textarea {
 
 .benefits__list-desc :last-child {
 	margin-bottom: 0;
+}
+
+/* Popups
+--------------------------------------------- */
+.page-template-template-frontend .overlay {
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.page-template-template-frontend .popup {
+	color: #FFFF;
+}
+
+.page-template-template-frontend .popup__header {
+	margin-bottom: 2.625rem;
+}
+
+.page-template-template-frontend .popup__header h2 {
+	font-size: 3rem;
+	font-weight: 700;
+	line-height: 4.125rem;
+}
+
+.page-template-template-frontend .popup__content {
+	padding: 58px 91px 49px 99px;
+	max-height: fit-content;
+	position: relative;
+	background-color: #1E19CC;
+	width: 100%;
+	max-width: 59.625rem;
+	height: 100%;
+}
+
+.page-template-template-frontend .popup__form {
+	max-width: 29rem;
+}
+
+.page-template-template-frontend .popup__form label:not(.popup__file-label) {
+	visibility: hidden;
+	position: absolute;
+}
+
+.page-template-template-frontend .popup__fields-field {
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid #FFFFFF;
+	margin-bottom: 2.8125rem;
+}
+
+.page-template-template-frontend .popup__fields-field:last-child {
+	margin-bottom: 2.5625rem;
+}
+
+.page-template-template-frontend .popup__file {
+	border: 3px dashed #F95157;
+	position: relative;
+}
+
+.page-template-template-frontend .popup__file-label {
+	font-size: 1.125rem;
+	position: relative;
+	line-height: 1.1875rem;
+	font-weight: 400;
+	letter-spacing: 0.005em;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 214px;
+	gap: 5px;
+	flex-flow: column;
+	background-color: #130F96;
+}
+
+.page-template-template-frontend .popup__file-label span {
+	color: #F95157;
+	font-weight: 700;
+	letter-spacing: 0.045em;
+}
+
+.page-template-template-frontend .popup__file-icon {
+	margin-bottom: 1.5rem;
 }
 
 /* Headers

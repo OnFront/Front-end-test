@@ -24,4 +24,7 @@ get_header('frontend');
         endif;
     endwhile;
 
+   
+    get_template_part('template-parts/popups/popup');
+ 
 get_footer('frontend');

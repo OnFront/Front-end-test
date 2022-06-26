@@ -31,3 +31,63 @@ select {
 textarea {
 	width: 100%;
 }
+
+input[type="text"].popup__form-input,
+input[type="email"].popup__form-input,
+input[type="file"].popup__form-input, 
+input[type="submit"].popup__form-input {
+	all: unset;
+}
+
+input[type="text"].popup__form-input,
+input[type="email"].popup__form-input {
+	padding: .5rem 0;
+	width: 100%;
+
+	&::placeholder {
+		@include fontSize(18);
+		letter-spacing: 0.005em;
+		line-height: 1.1875rem;
+		color: #FFFF;
+	}
+
+	&:focus {
+		outline: 1px solid $color__primary;
+		border-radius: 5px;
+		transition: all 0.18s ease-out;
+		&::placeholder {
+			opacity: 0.9;
+			color: $color__primary;
+		}
+	}
+}
+
+input[type="file"].popup__form-input {
+	width: 100%;
+	opacity: 0;
+	z-index: 10;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	//left: -99999999999px;
+}
+
+input[type="submit"].popup__form-input {
+	margin-top: 1.6875rem;
+	height: 57px;
+	width: 133px;
+	background-color: $color__primary;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+	border: 1px solid transparent;
+
+	&:hover,
+	&:focus {
+		transition: all 0.18s ease-out;
+		border: 1px solid $color__primary;
+		background: transparent;
+		color: $color__primary;
+	}
+}
