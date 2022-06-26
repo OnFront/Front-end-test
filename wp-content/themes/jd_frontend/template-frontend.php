@@ -19,25 +19,10 @@ get_header('frontend');
         elseif(get_row_layout('template_layout') == 'benefits'):
             get_template_part('templates/frontend/benefits');
         elseif(get_row_layout('template_layout') == 'expectations'):
-            get_template_part('templates/frontend/expectations');  
+            get_template_part('templates/frontend/expectations');
+        elseif(get_row_layout('template_layout') == 'contact'):
+            get_template_part('templates/frontend/contact'); 
         endif;
     endwhile;
-
-
-// while(have_posts()) : the_post();
-//       while(have_rows('news_content')) : the_row();
-//         if(get_row_layout() == 'documents_section'):
-//           get_template_part('resources/templates/investors/documents');
-//         elseif(get_row_layout() == 'section_form'):
-//           get_template_part('resources/templates/investors/form');
-//         elseif(get_row_layout() == 'section_assembly'):
-//           get_template_part('resources/templates/investors/assembly');
-//         elseif(get_row_layout() == 'calendary'):
-//           get_template_part('resources/templates/investors/calendary');
-//         elseif(get_row_layout() == 'section_reports'):
-//           get_template_part('resources/templates/investors/news_reports');
-//         endif; 
-//       endwhile;
-//     endwhile;
 
 get_footer();

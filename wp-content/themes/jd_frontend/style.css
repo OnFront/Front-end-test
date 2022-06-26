@@ -691,7 +691,7 @@ input[type="submit"]:focus {
 	border-color: #aaa #bbb #bbb;
 }
 
-.button__primary, .button__secondary {
+.button--primary, .button--secondary {
 	font-size: 0.6875rem;
 	font-weight: 700;
 	line-height: 1.1875rem;
@@ -704,17 +704,29 @@ input[type="submit"]:focus {
 	color: #FFFFFF;
 	height: 100%;
 	padding: 20px 1.78rem;
-	transition: opacity 0.10s ease-out;
+	transition: opacity 0.05s ease-out;
 	text-decoration: none;
 }
 
-.button__primary:hover, .button__secondary:hover {
-	opacity: 0.9;
-	transition: opacity 0.25s ease-out;
+.button--primary:hover, .button--secondary:hover {
+	transition: all 0.15s ease-out;
 }
 
-.button__primary {
+.button--primary {
 	background-color: #F95157;
+}
+
+.button--primary:hover {
+	background-color: #1E19CC;
+	color: #ffff;
+}
+
+.button--secondary {
+	background-color: #1E19CC;
+}
+
+.button--secondary:hover {
+	color: #F95157;
 }
 
 input[type="text"],
@@ -1225,11 +1237,12 @@ textarea {
 .hero__content p {
 	margin: 1.25rem 0 1.3125rem 0;
 	letter-spacing: 0.015em;
+	width: 65%;
 }
 
 @media all and (min-width: 768px) {
 	.hero__content p {
-		width: 40%;
+		width: 41%;
 	}
 }
 
@@ -1427,6 +1440,44 @@ textarea {
 	.expectations__content {
 		max-width: 765px;
 	}
+}
+
+.contact {
+	background-color: #F95157;
+	color: #ffff;
+	text-align: center;
+	padding: 4.06rem 0;
+}
+
+.contact__header {
+	margin-bottom: 1.25rem;
+}
+
+@media all and (min-width: 992px) {
+	.contact__header {
+		margin-bottom: 2.5rem;
+	}
+}
+
+.contact__description {
+	padding-bottom: 1.375rem;
+}
+
+@media all and (min-width: 992px) {
+	.contact__description p {
+		letter-spacing: 0.035em;
+		margin-bottom: 1.875rem;
+	}
+}
+
+@media all and (min-width: 992px) {
+	.contact__description :last-child {
+		margin-bottom: 2.19rem;
+	}
+}
+
+.contact .button--secondary {
+	margin: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

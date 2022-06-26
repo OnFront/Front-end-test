@@ -29,8 +29,10 @@
         & p {
             margin: 1.25rem 0 1.3125rem 0;
             letter-spacing: 0.015em;
+            width: 65%;
+
             @include mq(md) {
-                width: 40%;
+                width: 41%;
             }
             @include mq(lg) {
                 width: 45.5%;
@@ -41,7 +43,6 @@
 
     &__image {
         position: relative;
-        //transform: translate(15vw, 1vh);
         max-width: 654px;
         max-height: 490px;
         width: 92%;

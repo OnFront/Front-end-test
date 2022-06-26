@@ -21,8 +21,8 @@ input[type="submit"] {
 }
 
 .button {
-	&__primary,
-	&__secondary {
+	&--primary,
+	&--secondary {
 		@include fontSize(11);
 		font-weight: 700;
 		line-height: 1.1875rem;
@@ -35,15 +35,25 @@ input[type="submit"] {
 		color: #FFFFFF;
 		height: 100%;
 		padding: 20px 1.78rem;
-		transition: opacity 0.10s ease-out;
+		transition: opacity 0.05s ease-out;
 		text-decoration: none;
 		&:hover {
-			opacity: 0.9;
-			transition: opacity 0.25s ease-out;
+			transition: all 0.15s ease-out;
 		}
 	}
 
-	&__primary {
+	&--primary {
 		background-color: $color__primary;
+		&:hover {
+			background-color: $color__secondary;
+			color: #ffff;
+		}
+	}
+	&--secondary {
+		background-color: $color__secondary;
+
+		&:hover {
+			color: $color__primary;
+		}
 	}
 }
