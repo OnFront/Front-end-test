@@ -15,7 +15,9 @@ get_header('frontend');
         if(get_row_layout('template_layout') == 'hero'):
             get_template_part('templates/frontend/hero');
         elseif(get_row_layout('template_layout') == 'workfor'):
-            get_template_part('templates/frontend/workfor');  
+            get_template_part('templates/frontend/workfor');
+        elseif(get_row_layout('template_layout') == 'benefits'):
+            get_template_part('templates/frontend/benefits');  
         endif;
     endwhile;
 

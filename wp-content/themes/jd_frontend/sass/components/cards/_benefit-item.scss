@@ -1,0 +1,38 @@
+.benefits__list{
+    &-item {
+    
+        width: 100%;
+        margin-bottom: 2rem;
+        @include mq(sm) {
+            width: 50%;
+        }
+        
+        @include mq(lg) {
+            width: 33.3%;
+            margin-bottom: 3.5rem;
+        }
+
+        & article {
+            text-align: center;
+            @include mq(sm) {
+                max-width: 13.3125rem;
+                text-align: start;
+            }
+        }
+    }
+
+    &-title {
+        margin: 1.2rem 0 .56rem 0;
+
+
+        @include mq(lg) {
+            margin: 1.75rem 0 .56rem 0;
+        }
+    }
+
+    &-desc {
+        & p {
+            letter-spacing: 0.03em;
+        }
+    }
+}

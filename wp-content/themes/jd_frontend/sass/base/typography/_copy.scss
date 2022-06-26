@@ -1,4 +1,7 @@
 p {
+	@include fontSize(11);
+	line-height: 1.1875rem;
+	font-weight: 400;
 	margin-bottom: 1.5em;
 }
 
