@@ -163,7 +163,7 @@
                             "key": "field_62b8293f9b3d3",
                             "label": "H2 Title",
                             "name": "h2_title",
-                            "type": "wysiwyg",
+                            "type": "text",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -172,11 +172,11 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "<span>Współpraca z OSOM<\/span><\/br>\r\nzapewniamy",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 0,
-                            "delay": 0
+                            "default_value": "<span>Współpraca z OSOM<\/span><\/br> zapewniamy",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         },
                         {
                             "key": "field_62b829619b3d4",
@@ -195,7 +195,7 @@
                             "min": 0,
                             "max": 0,
                             "layout": "table",
-                            "button_label": "",
+                            "button_label": "Add benefit",
                             "sub_fields": [
                                 {
                                     "key": "field_62b829949b3d5",
@@ -281,6 +281,138 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_62b8411c8a3d7": {
+                    "key": "layout_62b8411c8a3d7",
+                    "name": "expectations",
+                    "label": "expectations",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62b841438a3d8",
+                            "label": "h2 title",
+                            "name": "h2_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "A my? <span>Czego oczekujemy?<\/span><\/br> Co cechuje nasz ideał?",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_62b841528a3d9",
+                            "label": "Requirements",
+                            "name": "requirements_repeat",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Add requirement",
+                            "sub_fields": [
+                                {
+                                    "key": "field_62b841798a3da",
+                                    "label": "requirement",
+                                    "name": "requirement",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "Bardzo dobra znajomość technologii HTML, CSS, JavaScript, PHP",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_62b851a1b98f0": {
+                    "key": "layout_62b851a1b98f0",
+                    "name": "contact",
+                    "label": "contact",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62b851bbb98f1",
+                            "label": "h2 title",
+                            "name": "h2_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_62b85221ceb80",
+                            "label": "Description",
+                            "name": "description",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_62b85240ceb81",
+                            "label": "Button",
+                            "name": "button",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Dodaj wiersz",
@@ -306,5 +438,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1656239769
+    "modified": 1656246887
 }

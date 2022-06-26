@@ -34,5 +34,8 @@
         & p {
             letter-spacing: 0.03em;
         }
+        & :last-child {
+            margin-bottom: 0;
+        }
     }
 }

@@ -30,3 +30,26 @@ dt {
 dd {
 	margin: 0 1.5em 1.5em;
 }
+
+li.expectations__list-item {
+	@include fontSize(12);
+
+	display: flex;
+	align-items: center;
+	color: #ffff;
+	font-weight: 400;
+	margin-bottom: 1.25rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	@include mq(lg) {
+		@include fontSize(14);
+	}
+
+	& .tick {
+		min-width: 1.125rem;
+		margin-right: 1.56rem;
+	}
+}

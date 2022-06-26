@@ -592,6 +592,30 @@ dd {
 	margin: 0 1.5em 1.5em;
 }
 
+li.expectations__list-item {
+	font-size: 0.75rem;
+	display: flex;
+	align-items: center;
+	color: #ffff;
+	font-weight: 400;
+	margin-bottom: 1.25rem;
+}
+
+li.expectations__list-item:last-child {
+	margin-bottom: 0;
+}
+
+@media all and (min-width: 992px) {
+	li.expectations__list-item {
+		font-size: 0.875rem;
+	}
+}
+
+li.expectations__list-item .tick {
+	min-width: 1.125rem;
+	margin-right: 1.56rem;
+}
+
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
@@ -1063,6 +1087,10 @@ textarea {
 	letter-spacing: 0.03em;
 }
 
+.benefits__list-desc :last-child {
+	margin-bottom: 0;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
@@ -1338,7 +1366,7 @@ textarea {
 }
 
 .benefits {
-	padding-top: 1.3125rem;
+	padding: 1.3125rem 0 2.47rem;
 }
 
 .benefits__title {
@@ -1356,6 +1384,49 @@ textarea {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+}
+
+.expectations {
+	background-color: #1E19CC;
+	padding: 4.69rem 0 4.5rem;
+}
+
+.expectations__title {
+	margin-bottom: 2.75rem;
+}
+
+.expectations__title h2 {
+	color: #ffff;
+	text-align: center;
+	letter-spacing: 0.04em;
+}
+
+@media all and (min-width: 480px) {
+	.expectations__title h2 {
+		text-align: start;
+	}
+}
+
+.expectations__content {
+	margin: auto;
+}
+
+@media all and (min-width: 480px) {
+	.expectations__content {
+		max-width: 80%;
+	}
+}
+
+@media all and (min-width: 768px) {
+	.expectations__content {
+		max-width: 85%;
+	}
+}
+
+@media all and (min-width: 992px) {
+	.expectations__content {
+		max-width: 765px;
+	}
 }
 
 /*# sourceMappingURL=style.css.map */

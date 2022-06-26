@@ -1,0 +1,31 @@
+.expectations {
+    background-color: $color__secondary;
+    padding: 4.69rem 0 4.5rem;
+    &__title {
+        margin-bottom: 2.75rem;
+        & h2 {
+            color: #ffff;
+            text-align: center;
+            letter-spacing: 0.04em;
+            @include mq(sm) {
+                text-align: start;
+            }
+        }
+    }
+
+    &__content {
+        margin: auto;
+
+        @include mq(sm) {
+            max-width: 80%;
+        }
+
+        @include mq(md) {
+            max-width: 85%;
+        }
+
+        @include mq(lg) {
+            max-width: 765px;
+        }
+    }
+}

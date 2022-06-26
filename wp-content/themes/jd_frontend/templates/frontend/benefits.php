@@ -2,7 +2,7 @@
     <div class="container">
     <?php if(get_sub_field('h2_title')): ?>
         <header class="benefits__title">
-           <?php the_sub_field('h2_title'); ?>
+           <h2><?php the_sub_field('h2_title'); ?></h2>
         </header>
     <?php endif; ?>
   
