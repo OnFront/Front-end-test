@@ -1,35 +1,62 @@
 .page-template-template-frontend {
     & .overlay {
+        display: none;
         top: 0;
         left: 0;
-        position: absolute;
+        position: fixed;
         width: 100vw;
+        min-width: 20rem;
         min-height: 100vh;
-        display: flex;
         justify-content: center;
-        align-items: center;
+        z-index: 10;
         background-color: rgba(0, 0, 0, 0.3);
+
+        @include mq(lg) {
+            align-items: center;
+        }
+
+        &.active {
+            display: flex;
+        }
     }
     & .popup {
         color: #FFFF;
         &__header {
-            margin-bottom: 2.625rem;
+            margin-bottom: 1.5rem;
+            @include mq(md) {
+                margin-bottom: 2.625rem;
+            }
+            
             & h2 {
-                @include fontSize(48);
                 font-weight: 700;
-                line-height: 4.125rem;
+                @include fontSize(28); 
+                
+                @include mq(xl) {
+                    @include fontSize(48);
+                    line-height: 4.125rem;
+                }
+             
             }
         }
 
         &__content {
             //top: 7.125rem;
-            padding: 58px 91px 49px 99px;
-            max-height: fit-content;
+            padding: 1.8rem 1.25rem 1.51rem ;
+            height: 100%;
             position: relative;
             background-color: $color__secondary;
             width: 100%;
             max-width: 59.625rem;
-            height: 100%;
+            height: inherit;
+
+            @include mq(md) {
+                padding: 1.8rem 2.8rem 1.51rem 3.05rem;
+            }
+
+            @include mq(lg) {
+                padding: 3.625rem 5.6875rem 3.0625rem 6.1875rem;
+                max-height: fit-content;
+            }
         }
 
         &__form {
@@ -46,10 +73,16 @@
                 display: block;
                 width: 100%;
                 border-bottom: 1px solid #FFFFFF;
-                margin-bottom: 2.8125rem;
+                margin-bottom:  1.1rem;
+                @include mq(md){
+                    margin-bottom: 2.625rem;
+                }
+                
 
                 &:last-child{
-                    margin-bottom: 2.5625rem;
+                    @include mq(md) {
+                        margin-bottom: 2.5625rem;
+                    }
                 }
 
             }
@@ -60,7 +93,7 @@
             position: relative;
 
             &-label {
-                @include fontSize(18);
+                @include fontSize(12);
                 position: relative;
                 line-height: 1.1875rem; 
                 font-weight: 400;
@@ -70,10 +103,19 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 214px;
+                height: 5rem;
                 gap: 5px;
                 flex-flow: column;
                 background-color: #130F96;
+
+                @include mq-max(md) {
+                    padding: .8rem 1.25rem 1.25rem;
+                }
+
+                @include mq(md) {
+                    height: 13.375rem;
+                    @include fontSize(18);
+                }
 
                 & span {
                     color: $color__primary;
@@ -84,7 +126,11 @@
             }
 
             &-icon {
-                margin-bottom: 1.5rem;
+                margin-bottom: .5rem;
+                @include mq(md) {
+                    margin-bottom: 1.5rem;
+                }
+                
             }
         }
     }

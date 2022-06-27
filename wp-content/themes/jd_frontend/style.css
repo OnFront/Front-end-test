@@ -48,6 +48,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Alignments
 
 --------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+.overflow-hidden {
+	overflow: hidden;
+}
+
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -60,7 +65,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
@@ -377,6 +381,7 @@ template {
 
 html {
 	box-sizing: border-box;
+	min-width: 20rem;
 }
 
 /*--------------------------------------------------------------
@@ -776,10 +781,19 @@ input[type="submit"]:focus {
 .button--close {
 	all: unset;
 	position: absolute;
-	top: 1.875rem;
-	right: 1.875rem;
+	top: 1rem;
+	right: 1rem;
 	cursor: pointer;
 	transition: all .10s ease-out;
+	transform: scale(0.8);
+}
+
+@media all and (min-width: 768px) {
+	.button--close {
+		right: 1.875rem;
+		top: 1.875rem;
+		transform: unset;
+	}
 }
 
 .button--close:hover {
@@ -851,10 +865,17 @@ input[type="email"].popup__form-input {
 
 input[type="text"].popup__form-input::placeholder,
 input[type="email"].popup__form-input::placeholder {
-	font-size: 1.125rem;
+	font-size: 0.75rem;
 	letter-spacing: 0.005em;
 	line-height: 1.1875rem;
 	color: #FFFF;
+}
+
+@media all and (min-width: 768px) {
+	input[type="text"].popup__form-input::placeholder,
+	input[type="email"].popup__form-input::placeholder {
+		font-size: 1.125rem;
+	}
 }
 
 input[type="text"].popup__form-input:focus,
@@ -878,17 +899,27 @@ input[type="file"].popup__form-input {
 	top: 0;
 	left: 0;
 	position: absolute;
+	cursor: pointer;
 }
 
 input[type="submit"].popup__form-input {
 	margin-top: 1.6875rem;
-	height: 57px;
-	width: 133px;
+	height: 3rem;
+	width: 6rem;
 	background-color: #F95157;
 	text-align: center;
 	border-radius: 5px;
 	cursor: pointer;
 	border: 1px solid transparent;
+	font-size: 0.75rem;
+}
+
+@media all and (min-width: 768px) {
+	input[type="submit"].popup__form-input {
+		font-size: 0.9375rem;
+		height: 3.5625rem;
+		width: 8.3125rem;
+	}
 }
 
 input[type="submit"].popup__form-input:hover, input[type="submit"].popup__form-input:focus {
@@ -1180,15 +1211,26 @@ input[type="submit"].popup__form-input:hover, input[type="submit"].popup__form-i
 /* Popups
 --------------------------------------------- */
 .page-template-template-frontend .overlay {
+	display: none;
 	top: 0;
 	left: 0;
-	position: absolute;
+	position: fixed;
 	width: 100vw;
+	min-width: 20rem;
 	min-height: 100vh;
-	display: flex;
 	justify-content: center;
-	align-items: center;
+	z-index: 10;
 	background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media all and (min-width: 992px) {
+	.page-template-template-frontend .overlay {
+		align-items: center;
+	}
+}
+
+.page-template-template-frontend .overlay.active {
+	display: flex;
 }
 
 .page-template-template-frontend .popup {
@@ -1196,23 +1238,48 @@ input[type="submit"].popup__form-input:hover, input[type="submit"].popup__form-i
 }
 
 .page-template-template-frontend .popup__header {
-	margin-bottom: 2.625rem;
+	margin-bottom: 1.5rem;
+}
+
+@media all and (min-width: 768px) {
+	.page-template-template-frontend .popup__header {
+		margin-bottom: 2.625rem;
+	}
 }
 
 .page-template-template-frontend .popup__header h2 {
-	font-size: 3rem;
 	font-weight: 700;
-	line-height: 4.125rem;
+	font-size: 1.75rem;
+}
+
+@media all and (min-width: 1170px) {
+	.page-template-template-frontend .popup__header h2 {
+		font-size: 3rem;
+		line-height: 4.125rem;
+	}
 }
 
 .page-template-template-frontend .popup__content {
-	padding: 58px 91px 49px 99px;
-	max-height: fit-content;
+	padding: 1.8rem 1.25rem 1.51rem;
+	height: 100%;
 	position: relative;
 	background-color: #1E19CC;
 	width: 100%;
 	max-width: 59.625rem;
-	height: 100%;
+	height: inherit;
+}
+
+@media all and (min-width: 768px) {
+	.page-template-template-frontend .popup__content {
+		padding: 1.8rem 2.8rem 1.51rem 3.05rem;
+	}
+}
+
+@media all and (min-width: 992px) {
+	.page-template-template-frontend .popup__content {
+		padding: 3.625rem 5.6875rem 3.0625rem 6.1875rem;
+		max-height: fit-content;
+	}
 }
 
 .page-template-template-frontend .popup__form {
@@ -1228,11 +1295,19 @@ input[type="submit"].popup__form-input:hover, input[type="submit"].popup__form-i
 	display: block;
 	width: 100%;
 	border-bottom: 1px solid #FFFFFF;
-	margin-bottom: 2.8125rem;
+	margin-bottom: 1.1rem;
 }
 
-.page-template-template-frontend .popup__fields-field:last-child {
-	margin-bottom: 2.5625rem;
+@media all and (min-width: 768px) {
+	.page-template-template-frontend .popup__fields-field {
+		margin-bottom: 2.625rem;
+	}
+}
+
+@media all and (min-width: 768px) {
+	.page-template-template-frontend .popup__fields-field:last-child {
+		margin-bottom: 2.5625rem;
+	}
 }
 
 .page-template-template-frontend .popup__file {
@@ -1241,7 +1316,7 @@ input[type="submit"].popup__form-input:hover, input[type="submit"].popup__form-i
 }
 
 .page-template-template-frontend .popup__file-label {
-	font-size: 1.125rem;
+	font-size: 0.75rem;
 	position: relative;
 	line-height: 1.1875rem;
 	font-weight: 400;
@@ -1251,10 +1326,23 @@ input[type="submit"].popup__form-input:hover, input[type="submit"].popup__form-i
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 214px;
+	height: 5rem;
 	gap: 5px;
 	flex-flow: column;
 	background-color: #130F96;
+}
+
+@media all and (max-width: 768px) {
+	.page-template-template-frontend .popup__file-label {
+		padding: .8rem 1.25rem 1.25rem;
+	}
+}
+
+@media all and (min-width: 768px) {
+	.page-template-template-frontend .popup__file-label {
+		height: 13.375rem;
+		font-size: 1.125rem;
+	}
 }
 
 .page-template-template-frontend .popup__file-label span {
@@ -1264,7 +1352,13 @@ input[type="submit"].popup__form-input:hover, input[type="submit"].popup__form-i
 }
 
 .page-template-template-frontend .popup__file-icon {
-	margin-bottom: 1.5rem;
+	margin-bottom: .5rem;
+}
+
+@media all and (min-width: 768px) {
+	.page-template-template-frontend .popup__file-icon {
+		margin-bottom: 1.5rem;
+	}
 }
 
 /* Headers

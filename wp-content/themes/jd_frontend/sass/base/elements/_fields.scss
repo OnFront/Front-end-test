@@ -45,10 +45,14 @@ input[type="email"].popup__form-input {
 	width: 100%;
 
 	&::placeholder {
-		@include fontSize(18);
+		@include fontSize(12);
 		letter-spacing: 0.005em;
 		line-height: 1.1875rem;
 		color: #FFFF;
+
+		@include mq(md) {
+			@include fontSize(18);
+		}
 	}
 
 	&:focus {
@@ -70,19 +74,24 @@ input[type="file"].popup__form-input {
 	top: 0;
 	left: 0;
 	position: absolute;
-	//left: -99999999999px;
+	cursor: pointer;
 }
 
 input[type="submit"].popup__form-input {
 	margin-top: 1.6875rem;
-	height: 57px;
-	width: 133px;
+	height: 3rem;
+	width: 6rem;
 	background-color: $color__primary;
 	text-align: center;
 	border-radius: 5px;
 	cursor: pointer;
 	border: 1px solid transparent;
-
+	@include fontSize(12);
+	@include mq(md) {
+		@include fontSize(15);
+		height: 3.5625rem;
+		width: 8.3125rem;
+	}
 	&:hover,
 	&:focus {
 		transition: all 0.18s ease-out;

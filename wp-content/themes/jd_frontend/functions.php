@@ -144,6 +144,7 @@ function frontend_scripts() {
 	wp_style_add_data( 'frontend-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'frontend-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'frontend-popup', get_template_directory_uri() . '/js/popup.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

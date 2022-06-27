@@ -20,7 +20,7 @@
                 $button_title = $button['title'];
                 $button_target = $button['target'] ? $button['target'] : '_self';
                 ?>
-                <a role="button" class="button--secondary" href="<?php echo esc_url( $button_url ); ?>" target="<?php echo esc_attr( $button_target ); ?>"><?php echo esc_html( $button_title ); ?></a>
+                <a role="button" class="button--secondary" href="<?php echo esc_url( $button_url ); ?>" target="<?php echo esc_attr( $button_target ); ?>" data-target="open-popup"><?php echo esc_html( $button_title ); ?></a>
             <?php endif; ?>
         </div>
     </div>
