@@ -15,6 +15,8 @@ get_header('frontend');
             get_template_part('templates/frontend/hero');
         elseif(get_row_layout('template_layout') == 'workfor'):
             get_template_part('templates/frontend/workfor');
+        elseif(get_row_layout('template_layout') == 'gallery'):
+            get_template_part('templates/frontend/gallery');
         elseif(get_row_layout('template_layout') == 'benefits'):
             get_template_part('templates/frontend/benefits');
         elseif(get_row_layout('template_layout') == 'expectations'):

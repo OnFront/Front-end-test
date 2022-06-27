@@ -1,0 +1,47 @@
+.fe-gallery {
+    position: relative;
+    &__vector {
+        position: absolute;
+    }
+
+    & .vector {
+        &--1 {
+            display: block;
+            left: -103px;
+            top: -153px;
+            transform: scale(.3);
+
+
+            @include mq(sm) {
+                top: unset;
+                bottom: 26px;
+                transform: scale(.6);
+            }
+            @include mq(md) {
+                transform: scale(1);
+                left: -103px;
+                top: 56px;
+            }
+            @include mq(xxxl) {
+                transform: scale(1.5);
+            }
+        }
+        &--2 {
+            right: 0;
+            bottom: -102px;
+            z-index: 3;
+            display: none;
+            @include mq(xl) {
+                display: block;
+            }
+
+            @include mq(xxxl) {
+                transform: scale(1.2);
+            }
+
+            @include mq(fhd) {
+                transform: scale(1.8);
+            }
+        }
+    }
+}

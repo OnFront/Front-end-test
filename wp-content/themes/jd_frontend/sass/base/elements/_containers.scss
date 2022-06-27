@@ -19,4 +19,10 @@
         // max-width 1031px
         max-width: 64.4375rem;
     }
+
+    &--gallery {
+        @include mq(lg) {
+            max-width: 56.5625rem;
+        }
+    }
 }

@@ -48,11 +48,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Alignments
 
 --------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
-.overflow-hidden {
-	overflow: hidden;
-}
-
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -65,6 +60,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
@@ -571,6 +567,12 @@ body {
 	}
 }
 
+@media all and (min-width: 992px) {
+	.container--gallery {
+		max-width: 56.5625rem;
+	}
+}
+
 hr {
 	background-color: #ccc;
 	border: 0;
@@ -761,6 +763,10 @@ input[type="submit"]:focus {
 	transition: all 0.15s ease-out;
 }
 
+.button--primary:visited, .button--secondary:visited {
+	color: #FFFFFF;
+}
+
 .button--primary {
 	background-color: #F95157;
 }
@@ -927,6 +933,19 @@ input[type="submit"].popup__form-input:hover, input[type="submit"].popup__form-i
 	border: 1px solid #F95157;
 	background: transparent;
 	color: #F95157;
+}
+
+/* CSS Classes
+--------------------------------------------- */
+.overflow-hidden {
+	overflow: hidden;
+}
+
+@media all and (min-width: 992px) {
+	.overflow-hidden {
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -1157,6 +1176,94 @@ input[type="submit"].popup__form-input:hover, input[type="submit"].popup__form-i
 
 .gallery-caption {
 	display: block;
+}
+
+.fe-gallery {
+	margin: 2.4375rem 0 6.375rem 0;
+}
+
+.fe-gallery__wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 10%;
+}
+
+@media all and (min-width: 480px) {
+	.fe-gallery__wrapper {
+		grid-gap: 10%;
+	}
+}
+
+@media all and (min-width: 600px) {
+	.fe-gallery__wrapper {
+		grid-gap: 8%;
+	}
+}
+
+@media all and (min-width: 768px) {
+	.fe-gallery__wrapper {
+		grid-gap: 2.0625rem;
+	}
+}
+
+.fe-gallery__box img {
+	position: relative;
+	display: block;
+	z-index: 2;
+}
+
+.fe-gallery__box:nth-child(1) img {
+	margin-left: auto;
+	margin-right: 0;
+	transform: translateX(29px);
+}
+
+@media all and (min-width: 768px) {
+	.fe-gallery__box:nth-child(1) img {
+		transform: translateX(35px);
+		min-width: 386px;
+		height: auto;
+	}
+}
+
+.fe-gallery__box:nth-child(2) img {
+	transform: translateX(5px) translateY(12px);
+}
+
+@media all and (min-width: 768px) {
+	.fe-gallery__box:nth-child(2) img {
+		transform: translateX(35px) translateY(96px);
+		margin-top: auto;
+		margin-bottom: 0;
+		min-width: 326px;
+		height: auto;
+	}
+}
+
+.fe-gallery__box:nth-child(3) img {
+	transform: translateX(22px) translateY(-24px);
+}
+
+@media all and (min-width: 768px) {
+	.fe-gallery__box:nth-child(3) img {
+		transform: translateY(3px);
+		min-width: 511px;
+		height: auto;
+	}
+}
+
+.fe-gallery__box:nth-child(4) img {
+	transform: translateY(-13px);
+	clip-path: inset(0 0 42% 0);
+}
+
+@media all and (min-width: 768px) {
+	.fe-gallery__box:nth-child(4) img {
+		transform: translateX(5px) translateY(53px);
+		width: auto;
+		min-height: 406px;
+		clip-path: initial;
+	}
 }
 
 /* Cards
@@ -1721,7 +1828,7 @@ input[type="submit"].popup__form-input:hover, input[type="submit"].popup__form-i
 	position: relative;
 }
 
-@media all and (min-width: 1170px) {
+@media all and (min-width: 768px) {
 	.work-for {
 		padding: 3.75rem 0;
 	}
@@ -1802,6 +1909,68 @@ input[type="submit"].popup__form-input:hover, input[type="submit"].popup__form-i
 	.work-for__clients-item {
 		margin-bottom: 0;
 		width: auto;
+	}
+}
+
+.fe-gallery {
+	position: relative;
+}
+
+.fe-gallery__vector {
+	position: absolute;
+}
+
+.fe-gallery .vector--1 {
+	display: block;
+	left: -103px;
+	top: -153px;
+	transform: scale(0.3);
+}
+
+@media all and (min-width: 480px) {
+	.fe-gallery .vector--1 {
+		top: unset;
+		bottom: 26px;
+		transform: scale(0.6);
+	}
+}
+
+@media all and (min-width: 768px) {
+	.fe-gallery .vector--1 {
+		transform: scale(1);
+		left: -103px;
+		top: 56px;
+	}
+}
+
+@media all and (min-width: 1600px) {
+	.fe-gallery .vector--1 {
+		transform: scale(1.5);
+	}
+}
+
+.fe-gallery .vector--2 {
+	right: 0;
+	bottom: -102px;
+	z-index: 3;
+	display: none;
+}
+
+@media all and (min-width: 1170px) {
+	.fe-gallery .vector--2 {
+		display: block;
+	}
+}
+
+@media all and (min-width: 1600px) {
+	.fe-gallery .vector--2 {
+		transform: scale(1.2);
+	}
+}
+
+@media all and (min-width: 1920px) {
+	.fe-gallery .vector--2 {
+		transform: scale(1.8);
 	}
 }
 
