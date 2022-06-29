@@ -108,6 +108,8 @@
                 flex-flow: column;
                 background-color: #130F96;
 
+
+              
                 @include mq-max(md) {
                     padding: .8rem 1.25rem 1.25rem;
                 }
@@ -115,6 +117,7 @@
                 @include mq(md) {
                     height: 13.375rem;
                     @include fontSize(18);
+                    display: none; 
                 }
 
                 & span {

@@ -16,7 +16,7 @@
                 $link_title = $link['title'];
                 $link_target = $link['target'] ? $link['target'] : '_self';
                 ?>
-                <a role="button" class="button--primary" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" data-target="open-popup"><?php echo esc_html( $link_title ); ?></a>
+                <a role="button" class="button--primary" target="<?php echo esc_attr( $link_target ); ?>" data-target="open-popup"><?php echo esc_html( $link_title ); ?></a>
             <?php endif; ?>
         </div>
       

@@ -1,4 +1,9 @@
-<form action="?" class="popup__form">
+<?php
+
+?>
+
+
+<form action="?" method="POST" enctype="multipart/form-data" class="popup__form">
     <div class="popup__fields">
         <div class="popup__fields-field">
             <label for="name_surname">Twoje imię i nazwisko</label>
@@ -31,7 +36,7 @@
         </label>
         <input class="popup__form-input" type="file" name="file_upload" id="file_upload">
     </div>
-   
-
+    <!-- <?php //wp_nonce_field( 'new-cv' ); ?> -->
+    <input type="hidden" name="post_id" id="post_id" value="55" />
     <input class="popup__form-input" type="submit" value="Aplikuj">
 </form>

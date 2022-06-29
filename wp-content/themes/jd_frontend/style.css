@@ -899,13 +899,13 @@ input[type="email"].popup__form-input:focus::placeholder {
 
 input[type="file"].popup__form-input {
 	width: 100%;
-	opacity: 0;
 	z-index: 10;
 	height: 100%;
 	top: 0;
 	left: 0;
-	position: absolute;
 	cursor: pointer;
+	position: relative;
+	opacity: 1;
 }
 
 input[type="submit"].popup__form-input {
@@ -1449,6 +1449,7 @@ input[type="submit"].popup__form-input:hover, input[type="submit"].popup__form-i
 	.page-template-template-frontend .popup__file-label {
 		height: 13.375rem;
 		font-size: 1.125rem;
+		display: none;
 	}
 }
 
