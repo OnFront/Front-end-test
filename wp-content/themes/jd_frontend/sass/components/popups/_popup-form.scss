@@ -91,10 +91,15 @@
         &__file {
             border: 3px dashed $color__primary;
             position: relative;
+            height: 10rem;
+
+            @include mq(md) {
+                height: 13.375rem;
+            }
 
             &-label {
                 @include fontSize(12);
-                position: relative;
+               
                 line-height: 1.1875rem; 
                 font-weight: 400;
                 letter-spacing: 0.005em;
@@ -103,21 +108,21 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 5rem;
                 gap: 5px;
                 flex-flow: column;
                 background-color: #130F96;
+                
 
-
+   
               
                 @include mq-max(md) {
                     padding: .8rem 1.25rem 1.25rem;
                 }
 
                 @include mq(md) {
-                    height: 13.375rem;
+                    //height: 13.375rem;
                     @include fontSize(18);
-                    display: none; 
+                    //display: none; 
                 }
 
                 & span {
@@ -135,6 +140,70 @@
                 }
                 
             }
+        }
+
+        & .msg {
+            margin-top: 0.75rem;
+            height: 1.875rem;
+        }
+    }
+
+
+
+    [data-active] {
+
+        &.uploading,
+        &.successfully-uploaded {
+            @include fontSize(12);
+            position: relative;
+            line-height: 1.1875rem; 
+            font-weight: 400;
+            letter-spacing: 0.005em;
+            height: 100%;
+            width: 100%;
+            align-items: center;
+            flex-flow: column;
+            justify-content: center;
+            background-color: #130F96;
+            text-align: center;
+            @include mq(md) {
+                //height: 13.375rem;
+                @include fontSize(18);
+            }
+        }
+
+
+        &.successfully-uploaded {
+            flex-flow:column;
+            gap: 1.4375rem;
+
+            & svg {
+                min-height: 3.75rem;
+                min-width: 3.75rem;
+            }
+            
+            @include mq-max(md) {
+                padding: .8rem 1.25rem 1.25rem;
+            }
+
+            @include mq(md) {
+                padding: 0.8rem 1.25rem 1.25rem;
+            }
+            @include mq(md) {
+                
+                @include fontSize(18);
+            }
+        }
+
+
+    }
+
+
+    [data-active] {
+        display: none;
+
+        &.active {
+            display: flex;
         }
     }
 }

@@ -3,21 +3,21 @@
 ?>
 
 
-<form action="?" method="POST" enctype="multipart/form-data" class="popup__form">
+<form action="?" method="POST" enctype="multipart/form-data" class="popup__form" id="popup-form" required>
     <div class="popup__fields">
         <div class="popup__fields-field">
             <label for="name_surname">Twoje imię i nazwisko</label>
-            <input class="popup__form-input" type="text" name="name_surname" id="name_surname" placeholder="Imię i nazwisko">
+            <input class="popup__form-input" type="text" name="name_surname" id="name_surname" placeholder="Imię i nazwisko" required>
         </div>
 
         <div class="popup__fields-field">
             <label for="your_email">Twój adres e-mail</label>
-            <input class="popup__form-input" type="email" name="your_email" id="your_email" placeholder="Adres e-mail">
+            <input class="popup__form-input" type="email" name="your_email" id="your_email" placeholder="Adres e-mail" required>
         </div>
     </div>
 
     <div class="popup__file">
-        <label class="popup__file-label" for="file_upload">
+        <label class="popup__file-label active" for="file_upload" data-active>
             
             <svg class="popup__file-icon" width="71" height="59" viewBox="0 0 71 59" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_10_10)">
@@ -34,9 +34,28 @@
 
             <div>Przeciągnij plik lub <span> wybierz z folderu</span></div>
         </label>
-        <input class="popup__form-input" type="file" name="file_upload" id="file_upload">
+
+
+        <div class="uploading" data-active>
+        </div>
+        
+
+        <div class="successfully-uploaded" data-active>
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 30.2476L24.8319 40L46 19" stroke="#00D1C1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 57H57V3H3V57Z" stroke="#00D1C1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="info">
+                    Twój plik wgrany poprawnie
+                </div>
+        </div>
+        <input class="popup__form-input input-file" type="file" name="file_upload" id="file_upload" >
+    </div>
+
+    <div class="msg">
+        Maksymalny rozmiar pliku to 5 MB, a dopuszczalne formaty to: pdf, doc, docx.
     </div>
     <!-- <?php //wp_nonce_field( 'new-cv' ); ?> -->
     <input type="hidden" name="post_id" id="post_id" value="55" />
-    <input class="popup__form-input" type="submit" value="Aplikuj">
+    <input class="popup__form-input" id="submit" type="submit" value="Aplikuj">
 </form>
