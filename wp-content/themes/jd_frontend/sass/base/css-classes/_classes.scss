@@ -6,3 +6,11 @@
         overflow-y: scroll;
     }
 }
+
+.d-none {
+    display: none;
+}
+
+.has-error {
+    color: $color__primary;
+}

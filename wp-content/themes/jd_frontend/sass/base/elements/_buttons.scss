@@ -38,6 +38,7 @@ input[type="submit"] {
 		transition: opacity 0.05s ease-out;
 		text-decoration: none;
 		border-radius: 3px;
+		cursor: pointer;
 		
 		@include mq(xxl) {
 			@include fontSize(14);

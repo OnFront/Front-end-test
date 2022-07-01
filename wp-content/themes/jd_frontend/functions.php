@@ -145,7 +145,8 @@ function frontend_scripts() {
 
 	wp_enqueue_script( 'frontend-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'frontend-popup', get_template_directory_uri() . '/js/popup.js', array(), _S_VERSION, true );
-
+	wp_enqueue_script( 'ajax_form', get_template_directory_uri() . '/js/ajax-form.js', array('jquery') );
+	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -223,3 +224,6 @@ function cptui_register_my_cpts_cv() {
 }
 
 add_action( 'init', 'cptui_register_my_cpts_cv' );
+
+
+

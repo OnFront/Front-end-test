@@ -71,14 +71,23 @@ input[type="file"].popup__form-input {
 	z-index: 10;
 	height: 100%;
 	top: 0;
-	left: 0;
+	//left: 0;
 	//opacity: 0;
-	//position: absolute;
 	cursor: pointer;
 
 	
-	position: relative;
-	opacity: 1;
+	position: absolute;
+	opacity: 0;
+
+
+
+}
+
+.popup {
+	& input[type="file"]::-ms-browse,
+	& input[type="file"]::-webkit-file-upload-button  {
+		background-color: red;
+	}
 }
 
 input[type="submit"].popup__form-input {
@@ -90,6 +99,7 @@ input[type="submit"].popup__form-input {
 	border-radius: 5px;
 	cursor: pointer;
 	border: 1px solid transparent;
+
 	@include fontSize(12);
 	@include mq(md) {
 		@include fontSize(15);

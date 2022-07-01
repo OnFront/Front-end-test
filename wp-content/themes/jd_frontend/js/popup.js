@@ -9,16 +9,16 @@ if(body.classList.contains('page-template-template-frontend')){
     buttons.forEach(btn =>{
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            openPopup();
+            togglePopup();
         })
     })
 
     closeBtn.addEventListener('click', () => {
-        openPopup();
+        togglePopup();
     })
     
     
-    function openPopup() {
+    function togglePopup() {
         popup.classList.toggle('active');
         body.classList.toggle('overflow-hidden');
     }
