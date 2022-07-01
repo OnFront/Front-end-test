@@ -17,33 +17,37 @@ $email;
 $file;
 
 if(isset($_POST)) {
-    if(isset($_POST["name_surname"])) {
-        $name = $_POST["name_surname"];
+    if(!empty($_POST)){
+        if(isset($_POST["name_surname"])) {
+            $name = $_POST["name_surname"];
+        }
+
+        if(isset($_POST["your_email"])) {
+            $email = $_POST["your_email"];
+        }
+
+        if(isset($_FILES['file_upload'])) {
+            $file = $_FILES['file_upload'];
+            $file_type = $_FILES['type'];
+            $file_name = $_FILES['file_upload']['name'];
+            $file_tmp_name = $_FILES['file_upload']['tmp_name'];
+        }
+
+        
+        $new_post = array(
+            'post_title'    => $name,
+            'post_content'  => '<b>email: </b>' . $email,
+            'post_status'   => 'publish',          
+            'post_type' => 'cv'
+        );
+
+        $pid = wp_insert_post($new_post);
+        $attachment_id = media_handle_upload( 'file_upload', $pid );
+
+        update_field( 'file', $attachment_id, $pid );
     }
-
-    if(isset($_POST["your_email"])) {
-        $email = $_POST["your_email"];
-    }
-
-    if(isset($_FILES['file_upload'])) {
-        $file = $_FILES['file_upload'];
-        $file_type = $_FILES['type'];
-        $file_name = $_FILES['file_upload']['name'];
-        $file_tmp_name = $_FILES['file_upload']['tmp_name'];
-    }
-
-    $new_post = array(
-        'post_title'    => $name,
-        'post_content'  => '<b>email: </b>' . $email,
-        'post_status'   => 'publish',          
-        'post_type' => 'cv'
-    );
-
-    $pid = wp_insert_post($new_post);
-    $attachment_id = media_handle_upload( 'file_upload', $pid );
-
-    update_field( 'file', $attachment_id, $pid );
 }
+
 
 
 get_header('frontend');
