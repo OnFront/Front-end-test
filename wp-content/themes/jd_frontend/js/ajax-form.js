@@ -9,7 +9,11 @@ window.addEventListener('DOMContentLoaded', function(e) {
 
 function ajaxForm(e) {
     const popup = document.querySelector('.popup');
+<<<<<<< HEAD
     const submitBtn = document.getElementById('btnSubmit');
+=======
+    const submitBtn = document.getElementById('submit');
+>>>>>>> 42093a8289a55adb5cd0a5bc6528473af0ca3480
     const form = document.getElementById('popup-form');
     const fileInput = document.querySelector('.input-file');
     const msg = popup.querySelector('.msg');
