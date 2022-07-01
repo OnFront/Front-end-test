@@ -55,7 +55,6 @@
     <div class="msg">
         Maksymalny rozmiar pliku to 5 MB, a dopuszczalne formaty to: pdf, doc, docx.
     </div>
-    <!-- <?php //wp_nonce_field( 'new-cv' ); ?> -->
     <input type="hidden" name="post_id" id="post_id" value="55" />
-    <input cglass="popup__form-input" id="btnSubmit" type="submit" value="Aplikuj">
+    <input class="popup__form-input" id="btnSubmit" type="submit" value="Aplikuj">
 </form>

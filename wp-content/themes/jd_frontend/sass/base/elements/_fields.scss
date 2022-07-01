@@ -96,8 +96,8 @@ input[type="submit"].popup__form-input {
 	width: 6rem;
 	background-color: $color__primary;
 	text-align: center;
-	border-radius: 5px;
 	cursor: pointer;
+	border-radius: 5px;
 	border: 1px solid transparent;
 
 	@include fontSize(12);

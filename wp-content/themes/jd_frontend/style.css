@@ -999,8 +999,8 @@ input[type="submit"].popup__form-input {
 	width: 6rem;
 	background-color: #F95157;
 	text-align: center;
-	border-radius: 5px;
 	cursor: pointer;
+	border-radius: 5px;
 	border: 1px solid transparent;
 	font-size: 0.75rem;
 }
