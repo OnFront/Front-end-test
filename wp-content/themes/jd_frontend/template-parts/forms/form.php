@@ -57,5 +57,5 @@
     </div>
     <!-- <?php //wp_nonce_field( 'new-cv' ); ?> -->
     <input type="hidden" name="post_id" id="post_id" value="55" />
-    <input class="popup__form-input" id="btnSubmit" type="submit" value="Aplikuj">
+    <input cglass="popup__form-input" id="btnSubmit" type="submit" value="Aplikuj">
 </form>
