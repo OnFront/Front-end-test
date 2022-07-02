@@ -32,11 +32,10 @@ if(isset($_POST)) {
             $file_name = $_FILES['file_upload']['name'];
             $file_tmp_name = $_FILES['file_upload']['tmp_name'];
         }
-
         
         $new_post = array(
-            'post_title'    => $name,
-            'post_content'  => '<b>email: </b>' . $email,
+            'post_title'    => esc_html($name),
+            'post_content'  => '<b>email:</b> ' . esc_html($email),
             'post_status'   => 'publish',          
             'post_type' => 'cv'
         );
